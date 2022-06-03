@@ -1,0 +1,102 @@
+/*Norske bokstaver*/
+@charset "UTF-8";
+
+/*Bestemmer hvordan ting skal se ut i body tagen*/
+body {
+    font-family: Arial;
+    background-color: var(--body-color)
+}
+
+
+/*Farge på overskriften*/
+h1 {
+    color:var(--h1-color)
+}
+
+h1 .special-color { 
+  color: var(--border-color)
+} 
+
+/*icon til darkmode lig*/
+#icon{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/*darkmode lightmode*/
+:root{
+  --body-color: rgb(232, 232, 232);
+  --h1-color: rgb(0, 0, 0);
+  --header-color: rgb(201, 201, 201);
+  --table-color: rgb(201, 201, 201);
+  --tdth-color: rgb(36, 36, 36);
+  --border-color: rgb(25, 133, 161);
+ }
+.light-theme{
+  --body-color: rgb(64, 61, 57);
+  --h1-color: rgb(255, 252, 242);
+  --header-color: rgb(37, 36, 34);
+  --table-color: rgb(37, 36, 34);
+  --tdth-color: rgb(204, 197, 185);
+  --border-color: rgb(199, 70, 59);
+}
+
+  
+/*Bestemmer hvordan ting skal være i main tagen*/
+main {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    text-align: center;
+    grid-template-columns: repeat(6, 1fr); height: 100%;
+}
+
+/*header design*/
+.header {
+    grid-column:span 7;
+    text-align: left;
+    padding-left: 30px;
+    border-bottom: 3px;
+    border-color: var(--border-color);
+    background-color: var(--header-color)
+}
+
+/*Bilde*/
+img {
+    width: 1280px;
+    height: 720px;
+    max-height: 100%;
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 50px;
+}
+
+/*center diven (bilde)*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+/*hvordan elementer skal se ut i tabellen*/
+Table {
+  font-family: arial, sans-serif;
+  color: var(--tdth-color);
+  width: 100%;
+  margin-top: 50px;
+  background-color: var(--table-color);
+}
+
+/*design til teksten i tabellen*/
+td, th {
+  text-align: left;
+  padding: 8px;
+  font-size: 20px;
+}
+
+th {
+  color: var(--border-color);
+  background-color: var(--tdth-color);
+}
